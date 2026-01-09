@@ -1,0 +1,14 @@
+[
+  {"id": 1, "name": "Le Petit Bistro", "cuisine": "French", "rating": 4.5, "priceRange": 3, "city": "Paris", "vegetarianOptions": true},
+  {"id": 2, "name": "Sushi Master", "cuisine": "Japanese", "rating": 4.8, "priceRange": 4, "city": "Tokyo", "vegetarianOptions": true},
+  {"id": 3, "name": "", "cuisine": "Italian", "rating": 4.2, "priceRange": 2, "city": "Rome", "vegetarianOptions": true},
+  {"id": 4, "name": "Burger House", "cuisine": "American", "rating": -1.5, "priceRange": 1, "city": "New York", "vegetarianOptions": false},
+  {"id": 5, "name": "Taj Mahal", "cuisine": "Indian", "rating": 4.6, "priceRange": 2, "city": "Mumbai", "vegetarianOptions": true},
+  {"id": 6, "name": "Dragon Wok", "cuisine": "Chinese", "rating": 4.3, "priceRange": 2, "city": "Beijing", "vegetarianOptions": true},
+  {"id": 7, "name": "Taco Loco", "cuisine": "Mexican", "rating": 4.1, "priceRange": 6, "city": "Mexico City", "vegetarianOptions": true},
+  {"id": 8, "name": "La Brasserie", "cuisine": "French", "rating": 4.7, "priceRange": 3, "city": "Lyon", "vegetarianOptions": true},
+  {"id": 9, "name": "Steakhouse Prime", "cuisine": "American", "rating": 10.5, "priceRange": 4, "city": "Chicago", "vegetarianOptions": false},
+  {"id": 10, "name": "Vegan Delight", "cuisine": "Vegan", "rating": 4.9, "priceRange": 2, "city": "Berlin", "vegetarianOptions": true},
+  {"id": 11, "name": "Pasta House", "cuisine": "Italian", "rating": 3.8, "priceRange": 2, "city": "", "vegetarianOptions": true},
+  {"id": 12, "name": "Ramen Shop", "cuisine": "Japanese", "rating": 4.5, "priceRange": 2, "city": "Osaka", "vegetarianOptions": true}
+]
