@@ -280,25 +280,25 @@ package miniEtl
 
 object Main extends App {
 
-  println("🚀 Mini-ETL : Analyse de Restaurants\n")
+  println("Mini-ETL : Analyse de Restaurants\n")
 
   // TODO: Créer le pipeline ETL avec for-comprehension
   val result = for {
     // TODO: 1. Charger les restaurants avec DataLoader
     restaurants <- ??? // DataLoader.loadRestaurants("data/restaurants_dirty.json")
-    _ = println(s"✅ ${restaurants.length} restaurants chargés")
+    _ = println(s"${restaurants.length} restaurants chargés")
     
     // TODO: 2. Valider et filtrer avec DataValidator
     validRestaurants = ??? // DataValidator.filterValid(...)
-    _ = println(s"✅ ${validRestaurants.length} restaurants valides")
+    _ = println(s"${validRestaurants.length} restaurants valides")
     
     // TODO: 3. Générer le rapport avec ReportGenerator
     report = ??? // ReportGenerator.generateReport(...)
-    _ = println(s"✅ Rapport généré")
+    _ = println(s"Rapport généré")
     
     // TODO: 4. Écrire le rapport
     _ <- ??? // ReportGenerator.writeReport(report, "results.json")
-    _ = println(s"✅ Rapport écrit dans results.json")
+    _ = println(s"Rapport écrit dans results.json")
     
   } yield report
 
@@ -307,25 +307,25 @@ object Main extends App {
   //   - Si Left(error) : Afficher l'erreur
   result match {
     case Right(report) =>
-      println("\n📊 STATISTIQUES")
+      println("\n STATISTIQUES")
       println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
       // TODO: Afficher report.statistics.totalRestaurants
       // TODO: Afficher report.statistics.averageRating (avec f"${...}%.2f")
       // TODO: Afficher report.statistics.vegetarianFriendlyCount
       
-      println("\n🏆 TOP 3 RESTAURANTS")
+      println("\n TOP 3 RESTAURANTS")
       println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
       // TODO: Afficher report.topRated avec zipWithIndex
       
-      println("\n🍽️  PAR TYPE DE CUISINE")
+      println("\n PAR TYPE DE CUISINE")
       println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
       // TODO: Afficher report.byCuisine (trier par count décroissant)
       
-      println("\n💰 PAR GAMME DE PRIX")
+      println("\n PAR GAMME DE PRIX")
       println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
       // TODO: Afficher report.byPriceRange
       
-      println("\n✅ Pipeline ETL terminé avec succès !")
+      println("\n Pipeline ETL terminé avec succès !")
       
     case Left(error) =>
       // TODO: Afficher l'erreur et quitter

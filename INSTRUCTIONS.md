@@ -126,7 +126,7 @@ Assembler le pipeline.
 package miniEtl
 
 object Main extends App {
-  println("🚀 Mini-ETL : Analyse de Restaurants\n")
+  println("Mini-ETL : Analyse de Restaurants\n")
 
   val result = for {
     // TODO: 1. Charger les restaurants
