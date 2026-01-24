@@ -1,0 +1,25 @@
+# Fichiers système macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# SBT
+target/
+project/target/
+project/project/
+
+# Scala
+*.class
+*.log
+*.jar
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.bsp/
+
+# Résultats temporaires
+results.json
