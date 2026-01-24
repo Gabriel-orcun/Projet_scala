@@ -1,3 +1,3 @@
-[debug] not up to date. inChanged = true, force = false
-[debug] Updating ProjectRef(uri("file:/home/thomas/Workspace/fp-with-scala/fp-scala-seance6-students/project/"), "fp-scala-seance6-students-build")...
-[debug] Done updating ProjectRef(uri("file:/home/thomas/Workspace/fp-with-scala/fp-scala-seance6-students/project/"), "fp-scala-seance6-students-build")
+[0m[[0m[0mdebug[0m] [0m[0mnot up to date. inChanged = true, force = false[0m
+[0m[[0m[0mdebug[0m] [0m[0mUpdating ProjectRef(uri("file:/Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/project/"), "fp-scala-seance6-students-build")...[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone updating ProjectRef(uri("file:/Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/project/"), "fp-scala-seance6-students-build")[0m

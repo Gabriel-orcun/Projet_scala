@@ -1,0 +1,9 @@
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- Error: /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/src/main/scala/miniEtl/Main.scala:5:10 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m5 |[0m  println("========================================      val entriesPerSecond = if (duration > 0) report.statistics.tot_players / duration else 0.0[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m  |[0m          ^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m  |[0m          unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E040] Syntax Error: /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/src/main/scala/miniEtl/Main.scala:18:0 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m18 |[0m}intln([31m"   RAPPORT D'ANALYSE - JOUEURS DE FOOTBALL"[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0meof expected, but '}' found[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
