@@ -7,7 +7,7 @@ object Main extends App {
   println("===============================================")
   
   val startTime = System.currentTimeMillis()
-  val filename = "data/data_dirty.json"
+  val filename = "data/data_large.json"
   
   val result = for {
     players <- DataLoader.loadFootball(filename)

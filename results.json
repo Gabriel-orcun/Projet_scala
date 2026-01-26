@@ -1,9 +1,9 @@
 {
   "statistics" : {
-    "tot_players" : 500,
-    "tot_players_valid" : 49,
-    "parsing_errors" : 22,
-    "duplicated_removed" : 165
+    "tot_players" : 10000,
+    "tot_players_valid" : 4900,
+    "parsing_errors" : 0,
+    "duplicated_removed" : 0
   },
   "top_ten_Scores" : [
     {
@@ -13,58 +13,58 @@
       "matches" : 17
     },
     {
-      "name" : "Romelu De Bruyne",
-      "club" : "Bayern Munich",
-      "value" : 38.0,
-      "matches" : 30
-    },
-    {
-      "name" : "Vinicius Alexander-Arnold",
-      "club" : "RB Leipzig",
-      "value" : 37.0,
-      "matches" : 21
-    },
-    {
-      "name" : "Declan Jr",
-      "club" : "Borussia Dortmund",
-      "value" : 33.0,
-      "matches" : 20
-    },
-    {
-      "name" : "Mason Ramos",
-      "club" : "Monaco",
-      "value" : 22.0,
-      "matches" : 0
-    },
-    {
-      "name" : "Bruno Rashford",
-      "club" : "Arsenal",
-      "value" : 17.0,
-      "matches" : 20
-    },
-    {
-      "name" : "Neymar Ramos",
-      "club" : "Real Betis",
-      "value" : 17.0,
-      "matches" : 37
-    },
-    {
-      "name" : "Eduardo Heung-min",
-      "club" : "Atletico Madrid",
-      "value" : 17.0,
-      "matches" : 27
-    },
-    {
-      "name" : "Erling Silva",
-      "club" : "Monaco",
-      "value" : 16.0,
+      "name" : "João Fernandes 1",
+      "club" : "Tottenham",
+      "value" : 45.0,
       "matches" : 17
     },
     {
-      "name" : "Bruno van Dijk",
-      "club" : "Manchester United",
-      "value" : 15.0,
-      "matches" : 15
+      "name" : "João Fernandes 2",
+      "club" : "Tottenham",
+      "value" : 45.0,
+      "matches" : 17
+    },
+    {
+      "name" : "João Fernandes 3",
+      "club" : "Tottenham",
+      "value" : 45.0,
+      "matches" : 17
+    },
+    {
+      "name" : "João Fernandes 4",
+      "club" : "Tottenham",
+      "value" : 45.0,
+      "matches" : 17
+    },
+    {
+      "name" : "João Fernandes 5",
+      "club" : "Tottenham",
+      "value" : 45.0,
+      "matches" : 17
+    },
+    {
+      "name" : "João Fernandes 6",
+      "club" : "Tottenham",
+      "value" : 45.0,
+      "matches" : 17
+    },
+    {
+      "name" : "João Fernandes 7",
+      "club" : "Tottenham",
+      "value" : 45.0,
+      "matches" : 17
+    },
+    {
+      "name" : "João Fernandes 8",
+      "club" : "Tottenham",
+      "value" : 45.0,
+      "matches" : 17
+    },
+    {
+      "name" : "João Fernandes 9",
+      "club" : "Tottenham",
+      "value" : 45.0,
+      "matches" : 17
     }
   ],
   "top_ten_assisters" : [
@@ -75,58 +75,58 @@
       "matches" : 29
     },
     {
-      "name" : "Erling Grealish",
-      "club" : "Marseille",
-      "value" : 19.0,
-      "matches" : 15
-    },
-    {
-      "name" : "Pedri Kane",
-      "club" : "Lyon",
-      "value" : 17.0,
+      "name" : "Jack Silva 1",
+      "club" : "Roma",
+      "value" : 20.0,
       "matches" : 29
     },
     {
-      "name" : "Pedri Ronaldo",
-      "club" : "Real Madrid",
-      "value" : 16.0,
-      "matches" : 35
+      "name" : "Jack Silva 2",
+      "club" : "Roma",
+      "value" : 20.0,
+      "matches" : 29
     },
     {
-      "name" : "Eduardo Mané",
-      "club" : "Monaco",
-      "value" : 15.0,
-      "matches" : 34
+      "name" : "Jack Silva 3",
+      "club" : "Roma",
+      "value" : 20.0,
+      "matches" : 29
     },
     {
-      "name" : "Vinicius Alexander-Arnold",
-      "club" : "RB Leipzig",
-      "value" : 15.0,
-      "matches" : 21
+      "name" : "Jack Silva 4",
+      "club" : "Roma",
+      "value" : 20.0,
+      "matches" : 29
     },
     {
-      "name" : "Kevin Courtois",
-      "club" : "Juventus",
-      "value" : 15.0,
-      "matches" : 35
+      "name" : "Jack Silva 5",
+      "club" : "Roma",
+      "value" : 20.0,
+      "matches" : 29
     },
     {
-      "name" : "João Fernandes",
-      "club" : "Tottenham",
-      "value" : 15.0,
-      "matches" : 17
+      "name" : "Jack Silva 6",
+      "club" : "Roma",
+      "value" : 20.0,
+      "matches" : 29
     },
     {
-      "name" : "Bruno Rashford",
-      "club" : "Arsenal",
-      "value" : 14.0,
-      "matches" : 20
+      "name" : "Jack Silva 7",
+      "club" : "Roma",
+      "value" : 20.0,
+      "matches" : 29
     },
     {
-      "name" : "Jadon Kanté",
-      "club" : "Real Madrid",
-      "value" : 13.0,
-      "matches" : 34
+      "name" : "Jack Silva 8",
+      "club" : "Roma",
+      "value" : 20.0,
+      "matches" : 29
+    },
+    {
+      "name" : "Jack Silva 9",
+      "club" : "Roma",
+      "value" : 20.0,
+      "matches" : 29
     }
   ],
   "most_valuable_players" : [
@@ -137,58 +137,58 @@
       "matches" : 21
     },
     {
-      "name" : "Pedri Ronaldo",
-      "club" : "Real Madrid",
-      "value" : 174.0,
-      "matches" : 35
+      "name" : "Vinicius Alexander-Arnold 1",
+      "club" : "RB Leipzig",
+      "value" : 179.0,
+      "matches" : 21
     },
     {
-      "name" : "João Fernandes",
-      "club" : "Tottenham",
-      "value" : 174.0,
-      "matches" : 17
+      "name" : "Vinicius Alexander-Arnold 2",
+      "club" : "RB Leipzig",
+      "value" : 179.0,
+      "matches" : 21
     },
     {
-      "name" : "Raheem Alexander-Arnold",
-      "club" : "Napoli",
-      "value" : 173.0,
-      "matches" : 30
+      "name" : "Vinicius Alexander-Arnold 3",
+      "club" : "RB Leipzig",
+      "value" : 179.0,
+      "matches" : 21
     },
     {
-      "name" : "Jack Silva",
-      "club" : "Roma",
-      "value" : 167.0,
-      "matches" : 29
+      "name" : "Vinicius Alexander-Arnold 4",
+      "club" : "RB Leipzig",
+      "value" : 179.0,
+      "matches" : 21
     },
     {
-      "name" : "Joshua González",
-      "club" : "Tottenham",
-      "value" : 159.0,
-      "matches" : 33
+      "name" : "Vinicius Alexander-Arnold 5",
+      "club" : "RB Leipzig",
+      "value" : 179.0,
+      "matches" : 21
     },
     {
-      "name" : "Sergio Páez",
-      "club" : "Manchester United",
-      "value" : 150.0,
-      "matches" : 35
+      "name" : "Vinicius Alexander-Arnold 6",
+      "club" : "RB Leipzig",
+      "value" : 179.0,
+      "matches" : 21
     },
     {
-      "name" : "Robert Saka",
-      "club" : "Roma",
-      "value" : 132.0,
-      "matches" : 15
+      "name" : "Vinicius Alexander-Arnold 7",
+      "club" : "RB Leipzig",
+      "value" : 179.0,
+      "matches" : 21
     },
     {
-      "name" : "Jude Ronaldo",
-      "club" : "Tottenham",
-      "value" : 130.0,
-      "matches" : 22
+      "name" : "Vinicius Alexander-Arnold 8",
+      "club" : "RB Leipzig",
+      "value" : 179.0,
+      "matches" : 21
     },
     {
-      "name" : "Neymar Ramos",
-      "club" : "Real Betis",
-      "value" : 128.0,
-      "matches" : 37
+      "name" : "Vinicius Alexander-Arnold 9",
+      "club" : "RB Leipzig",
+      "value" : 179.0,
+      "matches" : 21
     }
   ],
   "highest_paid_players" : [
@@ -199,75 +199,75 @@
       "matches" : 22
     },
     {
-      "name" : "Declan Kimmich",
-      "club" : "Sevilla",
-      "value" : 48.4,
-      "matches" : 34
-    },
-    {
-      "name" : "Eduardo Mané",
-      "club" : "Monaco",
-      "value" : 46.9,
-      "matches" : 34
-    },
-    {
-      "name" : "Kevin Courtois",
-      "club" : "Juventus",
-      "value" : 46.5,
-      "matches" : 35
-    },
-    {
-      "name" : "Kevin Griezmann",
-      "club" : "Lille",
-      "value" : 46.1,
-      "matches" : 30
-    },
-    {
-      "name" : "Mason Ramos",
-      "club" : "Monaco",
-      "value" : 43.4,
-      "matches" : 0
-    },
-    {
-      "name" : "Bruno Rashford",
-      "club" : "Arsenal",
-      "value" : 42.8,
-      "matches" : 20
-    },
-    {
-      "name" : "Jude Ronaldo",
-      "club" : "Tottenham",
-      "value" : 41.4,
+      "name" : "Romelu Bellingham 1",
+      "club" : "Nice",
+      "value" : 48.5,
       "matches" : 22
     },
     {
-      "name" : "Jude Félix",
-      "club" : "Marseille",
-      "value" : 40.0,
-      "matches" : 30
+      "name" : "Romelu Bellingham 2",
+      "club" : "Nice",
+      "value" : 48.5,
+      "matches" : 22
     },
     {
-      "name" : "Bernardo Silva",
-      "club" : "Real Betis",
-      "value" : 39.8,
-      "matches" : 29
+      "name" : "Romelu Bellingham 3",
+      "club" : "Nice",
+      "value" : 48.5,
+      "matches" : 22
+    },
+    {
+      "name" : "Romelu Bellingham 4",
+      "club" : "Nice",
+      "value" : 48.5,
+      "matches" : 22
+    },
+    {
+      "name" : "Romelu Bellingham 5",
+      "club" : "Nice",
+      "value" : 48.5,
+      "matches" : 22
+    },
+    {
+      "name" : "Romelu Bellingham 6",
+      "club" : "Nice",
+      "value" : 48.5,
+      "matches" : 22
+    },
+    {
+      "name" : "Romelu Bellingham 7",
+      "club" : "Nice",
+      "value" : 48.5,
+      "matches" : 22
+    },
+    {
+      "name" : "Romelu Bellingham 8",
+      "club" : "Nice",
+      "value" : 48.5,
+      "matches" : 22
+    },
+    {
+      "name" : "Romelu Bellingham 9",
+      "club" : "Nice",
+      "value" : 48.5,
+      "matches" : 22
     }
   ],
   "players_by_league" : {
-    "Ligue 1" : 14,
-    "Bundesliga" : 5,
-    "Serie A" : 8,
-    "La Liga" : 10,
-    "Premier League" : 12
+    "Ligue 1" : 1400,
+    "Bundesliga" : 500,
+    "Serie A" : 800,
+    "La Liga" : 1000,
+    "Premier League" : 1200
   },
   "players_by_position" : {
-    "Midfielder" : 12,
-    "Forward" : 11,
-    "Goalkeeper" : 13,
-    "Defender" : 13
+    "Midfielder" : 1200,
+    "Forward" : 1100,
+    "Goalkeeper" : 1300,
+    "Defender" : 1300
   },
   "average_age_by_position" : {
-    "Midfielder" : 24.916666666666668,
+    "Midfielder" : 27.0,
     "Forward" : 29.454545454545453,
     "Goalkeeper" : 28.923076923076923,
     "Defender" : 28.692307692307693
@@ -279,8 +279,8 @@
     "Defender" : 5.384615384615385
   },
   "discipline_statistics" : {
-    "total_yellow_cards" : 230,
-    "total_red_cards" : 51,
+    "total_yellow_cards" : 23000,
+    "total_red_cards" : 5100,
     "most_disciplined_position" : "Defender",
     "least_disciplined_position" : "Forward"
   }

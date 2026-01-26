@@ -1,9 +1,8 @@
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- Error: /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/src/main/scala/miniEtl/Main.scala:5:10 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m5 |[0m  println("========================================      val entriesPerSecond = if (duration > 0) report.statistics.tot_players / duration else 0.0[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m  |[0m          ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m  |[0m          unclosed string literal[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E040] Syntax Error: /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/src/main/scala/miniEtl/Main.scala:18:0 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m18 |[0m}intln([31m"   RAPPORT D'ANALYSE - JOUEURS DE FOOTBALL"[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0meof expected, but '}' found[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E007] Type Mismatch Error: /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/src/main/scala/miniEtl/DataValidator.scala:31:59 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m31 |[0m    players.map([36mx[0m => normalisePosition(x.position)).filter(isValid)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                                           ^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                             Found:    (player : String)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                             Required: miniEtl.Football[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

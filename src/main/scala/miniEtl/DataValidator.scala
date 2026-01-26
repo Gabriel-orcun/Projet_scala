@@ -2,6 +2,16 @@ package miniEtl
 
 object DataValidator {
 
+  def normalisePosition(pos: String): String = {
+    pos match {
+      case "ATT" | "Attacker" => "Forward"
+      case "DEF"  => "Defender"
+      case _ => pos
+      
+    }
+    
+  }
+
   def isValid(player: Football): Boolean = {
     player.id > 0 &&
     player.name.trim.nonEmpty &&
@@ -18,7 +28,9 @@ object DataValidator {
   }
 
   def filterValid(players: List[Football]): List[Football] = {
-    players.filter(isValid)
+    players
+    .map(player => player.copy(position = normalisePosition(player.position)))
+    .filter(isValid)
   }
 
 
