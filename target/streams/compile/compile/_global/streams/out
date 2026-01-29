@@ -1,8 +1,7 @@
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E007] Type Mismatch Error: /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/src/main/scala/miniEtl/DataValidator.scala:31:59 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m31 |[0m    players.map([36mx[0m => normalisePosition(x.position)).filter(isValid)[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                                           ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                             Found:    (player : String)[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                             Required: miniEtl.Football[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E006] Not Found Error: /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/src/main/scala/miniEtl/DataValidator.scala:18:4 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m18 |[0m    validPositions.contains(player.position) &&[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m    ^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m    Not found: validPositions[0m
 [0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
 [0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

@@ -1,226 +1,105 @@
-# ⚽ Dataset 2 : Football Players - Joueurs de football
+# Projet Mini-ETL Football
 
-## 📋 Description
+Ce projet implémente un mini pipeline ETL (Extract, Transform, Load) en Scala pour traiter et analyser les données des joueurs de football à partir de fichiers JSON. Il suit les principes de la programmation fonctionnelle pour la robustesse et la clarté.
 
-Statistiques de joueurs de football professionnels des principales ligues européennes.
+## 🚀 Fonctionnalités
 
-## 📊 Structure des données
+- **Analyse JSON**: Charge les données à partir de fichiers JSON en utilisant Circe.
+- **Validation des données**: Nettoie et valide les données, en gérant les erreurs avec élégance.
+- **Analyse statistique**: Calcule diverses statistiques comme les meilleurs buteurs, la répartition des joueurs et les moyennes.
+- **Approche fonctionnelle**: Utilise des structures de données immuables, `Either` pour la gestion des erreurs, et la composition de fonctions.
+- **Rapports**: Génère un rapport d'analyse détaillé au format JSON et affiche un résumé dans la console.
 
-### Fichiers fournis
+## 📂 Structure du Projet
 
-- **data_clean.json** : 100 joueurs, données parfaites
-- **data_dirty.json** : 500 joueurs avec :
-  - Champs manquants (marketValue, salary, club)
-  - Valeurs négatives (age, goalsScored)
-  - Positions invalides ("Attacker" au lieu de "Forward")
-  - Âges impossibles (< 16 ou > 45)
-  - Doublons (même ID)
-- **data_large.json** : 10 000 entrées (joueurs + variations historiques)
-
-## 🎯 Outputs attendus
-
-### 1. Statistiques générales
-
-**Fichier** : `results.json`
-
-```json
-{
-  "statistics": {
-    "total_players_parsed": ...,
-    "total_players_valid": ...,
-    "parsing_errors": ...,
-    "duplicates_removed": ...
-  },
-  "top_10_scorers": [
-    {
-      "name": "...",
-      "club": "...",
-      "goals": ...,
-      "matches": ...
-    }
-  ],
-  "top_10_assisters": [...],
-  "most_valuable_players": [...],
-  "highest_paid_players": [...],
-  "players_by_league": {
-    "Premier League": ...,
-    "La Liga": ...,
-    "Serie A": ...,
-    "Bundesliga": ...,
-    "Ligue 1": ...
-  },
-  "players_by_position": {
-    "Goalkeeper": ...,
-    "Defender": ...,
-    "Midfielder": ...,
-    "Forward": ...
-  },
-  "average_age_by_position": {
-    "Goalkeeper": ...,
-    "Defender": ...,
-    "Midfielder": ...,
-    "Forward": ...
-  },
-  "average_goals_by_position": {
-    "Forward": ...,
-    "Midfielder": ...,
-    "Defender": ...,
-    "Goalkeeper": ...
-  },
-  "discipline_statistics": {
-    "total_yellow_cards": ...,
-    "total_red_cards": ...,
-    "most_disciplined_position": "...",
-    "least_disciplined_position": "..."
-  }
-}
-```
-
-### 2. Rapport texte
-
-**Fichier** : `report.txt`
+Le projet est organisé en plusieurs modules, chacun ayant une responsabilité spécifique :
 
 ```
-===============================================
-   RAPPORT D'ANALYSE - JOUEURS DE FOOTBALL
-===============================================
-
-📊 STATISTIQUES DE PARSING
----------------------------
-- Entrées totales lues      : ...
-- Entrées valides           : ...
-- Errées de parsing        : ...
-- Doublons supprimés        : ...
-
-⚽ TOP 10 - BUTEURS
--------------------
-1. ...                      : ... buts en ... matchs
-2. ...                      : ... buts en ... matchs
-...
-
-🎯 TOP 10 - PASSEURS
----------------------
-1. ...                      : ... passes en ... matchs
-2. ...                      : ... passes en ... matchs
-...
-
-💰 TOP 10 - VALEUR MARCHANDE
------------------------------
-1. ...                      : ... M€
-2. ...                      : ... M€
-...
-
-💵 TOP 10 - SALAIRES
---------------------
-1. ...                      : ... M€/an
-2. ...                      : ... M€/an
-...
-
-🏆 RÉPARTITION PAR LIGUE
--------------------------
-- Premier League            : ... joueurs
-- La Liga                   : ... joueurs
-- Serie A                   : ... joueurs
-- Bundesliga                : ... joueurs
-- Ligue 1                   : ... joueurs
-
-⚽ RÉPARTITION PAR POSTE
-------------------------
-- Gardiens (Goalkeeper)     : ... joueurs
-- Défenseurs (Defender)     : ... joueurs
-- Milieux (Midfielder)      : ... joueurs
-- Attaquants (Forward)      : ... joueurs
-
-📊 MOYENNES PAR POSTE
-----------------------
-ÂGE MOYEN :
-- Gardiens                  : ... ans
-- Défenseurs                : ... ans
-- Milieux                   : ... ans
-- Attaquants                : ... ans
-
-BUTS PAR MATCH (moyenne) :
-- Attaquants                : ... buts
-- Milieux                   : ... buts
-- Défenseurs                : ... buts
-- Gardiens                  : ... buts
-
-🟨 DISCIPLINE
---------------
-- Total cartons jaunes      : ...
-- Total cartons rouges      : ...
-- Poste le plus discipliné  : ...
-- Poste le moins discipliné : ...
-
-⏱️  PERFORMANCE
----------------
-- Temps de traitement       : ... secondes
-- Entrées/seconde           : ...
-
-===============================================
+src/main/scala/miniEtl/
+├── Football.scala          # Modèles de données (case classes)
+├── DataLoader.scala        # Chargement et analyse des données JSON
+├── DataValidator.scala     # Validation et nettoyage des données
+├── StatsCalculator.scala   # Calculs statistiques
+├── ReportGenerator.scala   # Génération de rapports
+└── Main.scala              # Point d'entrée principal de l'application
 ```
 
-## 🔧 Transformations à implémenter
+---
 
-### Obligatoires
+## 🛠️ Plongée Technique
 
-1. **Parsing et validation**
+### 1. Modèles de Données (`Football.scala`)
 
-   - Parser les 3 fichiers
-   - Valider : age entre 16 et 45, goals >= 0, matches > 0
-   - Positions valides : "Goalkeeper", "Defender", "Midfielder", "Forward"
-   - Supprimer les doublons (par ID)
+Ce fichier définit les structures de données utilisées dans toute l'application.
 
-2. **Top 10**
+- **`Football`**: Représente un seul joueur avec tous ses attributs. `Option[T]` est utilisé pour les champs qui peuvent être manquants dans les données source (`marketValue`, `salary`), évitant ainsi les `NullPointerException`.
+- **`FootballStats`**: Capture les statistiques sur le processus de chargement et de validation des données (par exemple, nombre total de joueurs, erreurs d'analyse, doublons supprimés).
+- **`TopPlayer`**: Une structure générique pour représenter un joueur dans une liste de top 10 (par exemple, meilleur buteur, le plus précieux).
+- **`DisciplineStatistics`**: Contient les statistiques relatives à la discipline des joueurs (cartons jaunes/rouges).
+- **`AnalysisReport`**: La structure de rapport principale qui regroupe toutes les statistiques générées en un seul objet pour une exportation facile.
 
-   - Top 10 buteurs
-   - Top 10 passeurs
-   - Top 10 valeurs marchandes
-   - Top 10 salaires
+### 2. Chargement des Données (`DataLoader.scala`)
 
-3. **Agrégations**
+Ce module est responsable de la lecture et de l'analyse du fichier JSON d'entrée.
 
-   - Compter joueurs par ligue
-   - Compter joueurs par poste
-   - Âge moyen par poste
-   - Buts moyens par poste
+- **`loadFootball(filename: String): Either[String, List[Football]]`**:
+  1.  Lit le contenu du fichier donné. Il utilise `Try` pour gérer les erreurs d'E/S potentielles (par exemple, fichier non trouvé).
+  2.  Analyse le contenu de la chaîne en un objet JSON à l'aide de la bibliothèque Circe.
+  3.  Décode le tableau JSON en une `List[Football]`. Les entrées qui ne sont pas conformes à la case class `Football` sont ignorées en toute sécurité.
+  4.  Retourne `Right(List[Football])` en cas de succès ou `Left(String)` avec un message d'erreur si une étape échoue. Cette approche fonctionnelle de la gestion des erreurs évite les exceptions et rend le flux de données plus prévisible.
 
-4. **Statistiques de discipline**
-   - Total de cartons jaunes et rouges
-   - Poste le plus/moins discipliné
+### 3. Validation des Données (`DataValidator.scala`)
 
-### Bonus (optionnel)
+Ce module nettoie et valide les données chargées.
 
-5. **Efficacité offensive**
+- **`normalisePosition(pos: String): String`**: Standardise les postes des joueurs (par exemple, mappe "ATT" et "Attacker" à "Forward"). Cela garantit la cohérence pour l'analyse statistique.
+- **`isValid(player: Football): Boolean`**: Vérifie si un enregistrement de joueur respecte les règles métier requises (par exemple, le nom n'est pas vide, l'âge est dans une fourchette réaliste, les statistiques sont non négatives).
+- **`filterValid(players: List[Football]): List[Football]]`**: Une fonction pipeline qui normalise d'abord le poste de chaque joueur, puis filtre les joueurs qui ne passent pas la vérification `isValid`.
+- **`removeDuplicates(players: List[Football]): List[Football]]`**: Supprime les enregistrements de joueurs en double en fonction de leur `id` unique.
 
-   - Calculer ratio buts/matchs
-   - Top 10 joueurs les plus efficaces (qui ont joué au moins 10 matchs)
+### 4. Calculs Statistiques (`StatsCalculator.scala`)
 
-6. **Meilleur rapport qualité/prix**
+Ce module contient toutes les fonctions pour effectuer une analyse statistique sur les données propres. Chaque fonction prend une `List[Football]` et retourne une métrique ou une liste spécifique.
 
-   - Calculer ratio buts/salaire (pour ceux qui ont un salaire)
-   - Top 10 "bonnes affaires"
+- **`footballStats(filename: String): FootballStats`**: Calcule les métadonnées sur le processus ETL lui-même, telles que le nombre d'erreurs d'analyse et de doublons supprimés.
+- **`topScores(players: List[Football]): List[TopPlayer]`**: Trie les joueurs par leur `goalsScored` par ordre décroissant et retourne les 10 meilleurs.
+- **`topTenAssisters`, `mostValuablePlayers`, `highestpPaidPlayers`**: Fonctions similaires qui classent les joueurs en fonction des passes décisives, de la valeur marchande et du salaire. Elles gèrent les types `Option` en toute sécurité en utilisant `getOrElse(0)`.
+- **`playersByLeague(players: List[Football]): Map[String, Int]`**: Regroupe les joueurs par leur ligue et compte le nombre de joueurs dans chacune.
+- **`playersByPosition`**: Fait de même pour les postes des joueurs.
+- **`averageAgeByPosition`, `averageGoalsByPosition`**: Calculent l'âge moyen et les buts moyens marqués pour chaque poste.
+- **`disciplineStatistics(players: List[Football]): DisciplineStatistics`**: Calcule les statistiques liées à la discipline, telles que le nombre total de cartons et les postes les plus/moins disciplinés sur la base d'un système de pénalités (un carton rouge vaut deux cartons jaunes).
 
-7. **Statistiques par ligue**
-   - Âge moyen par ligue
-   - Moyenne de buts par ligue
-   - Ligue la plus productive
+### 5. Génération de Rapport (`ReportGenerator.scala`)
 
-## 💡 Conseil - Mesure de performance
+Ce module orchestre la création et la sortie du rapport d'analyse final.
 
-```scala
-val start = System.currentTimeMillis()
-// ... traitement
-val duration = (System.currentTimeMillis() - start) / 1000.0
-println(f"Traitement effectué en $duration%.3f secondes")
-```
+- **`geratereport(players: List[Football], filename: String): AnalysisReport`**: Cette fonction agit comme un agrégateur. Elle appelle toutes les fonctions nécessaires de `StatsCalculator` et assemble les résultats en un seul objet `AnalysisReport`.
+- **`writeReport(report: AnalysisReport, filename: String): Either[String, Unit]`**:
+  1.  Sérialise l'objet `AnalysisReport` en une chaîne JSON formatée à l'aide de Circe.
+  2.  Écrit la chaîne JSON dans le fichier de sortie spécifié (`results.json`).
+  3.  Comme `DataLoader`, il retourne un `Either` pour gérer fonctionnellement les erreurs d'écriture de fichier potentielles.
 
-## ✅ Critères de réussite
+### 6. Application Principale (`Main.scala`)
 
-- ✅ Les 3 fichiers sont parsés sans erreur fatale
-- ✅ Les positions invalides sont normalisées ou rejetées
-- ✅ Les données aberrantes sont filtrées (âges impossibles, stats négatives)
-- ✅ Les 10 statistiques obligatoires sont présentes
-- ✅ `results.json` est valide et bien formaté
-- ✅ `report.txt` est lisible et structuré
-- ✅ Le traitement de `data_large.json` prend < 10 secondes
+C'est le point d'entrée de l'application. Il orchestre l'ensemble du pipeline ETL.
+
+- Il utilise une `for-comprehension` pour enchaîner les différentes étapes du processus ETL :
+  1.  **Charger** les joueurs depuis le fichier (`DataLoader.loadFootball`).
+  2.  **Valider** et **nettoyer** les données (`DataValidator.filterValid`, `DataValidator.removeDuplicates`).
+  3.  **Générer** le rapport (`ReportGenerator.geratereport`).
+  4.  **Écrire** le rapport dans un fichier (`ReportGenerator.writeReport`).
+- La `for-comprehension` fournit un moyen propre et lisible de gérer la monade `Either`. Si une étape retourne un `Left`, toute la chaîne est court-circuitée et l'erreur est propagée.
+- Si le pipeline se termine avec succès, il affiche un résumé formaté du rapport dans la console.
+- Il mesure et affiche également le temps d'exécution total et la vitesse de traitement (entrées par seconde).
+
+## ⚙️ Comment Exécuter
+
+1.  **Compiler le code**:
+    ```sh
+    sbt compile
+    ```
+2.  **Exécuter l'application**:
+    ```sh
+    sbt run
+    ```
+    L'application traitera `data/data_clean.json` par défaut. Vous pouvez changer le fichier d'entrée dans `src/main/scala/miniEtl/Main.scala`. La sortie sera affichée dans la console, et un fichier `results.json` détaillé sera généré dans le répertoire racine du projet.

@@ -1,0 +1,103 @@
+===============================================
+   RAPPORT D'ANALYSE - data/data_dirty.json
+===============================================
+
+STATISTIQUES DE PARSING
+---------------------------
+- Entrees totales lues      : 500
+- Entrees valides           : 100
+- Erreurs de parsing        : 22
+- Doublons supprimes        : 334
+
+TOP 10 - BUTEURS
+-------------------
+1. João Fernandes            : 45 buts en 17 matchs
+2. Neymar Rice               : 43 buts en 28 matchs
+3. Phil Salah                : 42 buts en 18 matchs
+4. Romelu De Bruyne          : 38 buts en 30 matchs
+5. Vinicius Alexander-Arnold : 37 buts en 21 matchs
+6. Declan Jr                 : 33 buts en 20 matchs
+7. Robert Alexander-Arnold   : 31 buts en 38 matchs
+8. Phil Griezmann            : 31 buts en 18 matchs
+9. N'Golo Haaland            : 31 buts en 10 matchs
+10. Neymar Courtois           : 26 buts en 22 matchs
+
+TOP 10 - PASSEURS
+---------------------
+1. Jack Silva                : 20 passes en 29 matchs
+2. Jadon Rice                : 20 passes en 36 matchs
+3. Erling Grealish           : 19 passes en 15 matchs
+4. João Felix Kane           : 19 passes en 17 matchs
+5. João Salah                : 19 passes en 38 matchs
+6. Rúben Bellingham          : 18 passes en 37 matchs
+7. Erling van Dijk           : 17 passes en 30 matchs
+8. Pedri Kane                : 17 passes en 29 matchs
+9. Lionel Lewandowski        : 16 passes en 18 matchs
+10. Sergio Courtois           : 16 passes en 22 matchs
+
+TOP 10 - VALEUR MARCHANDE
+-----------------------------
+1. Pedri Ronaldo             : 174 M EUR
+2. João Fernandes            : 174 M EUR
+3. Raheem Alexander-Arnold   : 173 M EUR
+4. Robert Alexander-Arnold   : 172 M EUR
+5. Rúben Silva               : 170 M EUR
+6. Jack Silva                : 167 M EUR
+7. Joshua González           : 159 M EUR
+8. Sergio Páez               : 150 M EUR
+9. Jack Mbappé               : 147 M EUR
+10. Mason Foden               : 137 M EUR
+
+TOP 10 - SALAIRES
+--------------------
+1. Romelu Bellingham         : 48,50 M EUR/an
+2. Declan Kimmich            : 48,40 M EUR/an
+3. Rúben Bellingham          : 48,30 M EUR/an
+4. Eduardo Mané              : 46,90 M EUR/an
+5. Kevin Courtois            : 46,50 M EUR/an
+6. Kylian Cancelo            : 46,30 M EUR/an
+7. Kevin Griezmann           : 46,10 M EUR/an
+8. Mason Ramos               : 43,40 M EUR/an
+9. Bruno Rashford            : 42,80 M EUR/an
+10. Phil Salah                : 42,20 M EUR/an
+
+REPARTITION PAR LIGUE
+-------------------------
+- Ligue 1                   : 25 joueurs
+- Premier League            : 25 joueurs
+- La Liga                   : 20 joueurs
+- Serie A                   : 18 joueurs
+- Bundesliga                : 12 joueurs
+
+REPARTITION PAR POSTE
+------------------------
+- Forward                   : 29 joueurs
+- Defender                  : 25 joueurs
+- Midfielder                : 23 joueurs
+- Goalkeeper                : 23 joueurs
+
+MOYENNES PAR POSTE
+----------------------
+AGE MOYEN :
+- Defender                  : 29,0 ans
+- Goalkeeper                : 27,9 ans
+- Forward                   : 27,1 ans
+- Midfielder                : 26,6 ans
+
+BUTS PAR MATCH (moyenne) :
+- Forward                   : 21,86 buts
+- Midfielder                : 10,26 buts
+- Defender                  : 4,32 buts
+- Goalkeeper                : 0,00 buts
+
+DISCIPLINE
+--------------
+- Total cartons jaunes      : 473
+- Total cartons rouges      : 95
+- Poste le plus discipline  : Forward
+- Poste le moins discipline : Midfielder
+
+PERFORMANCE
+---------------
+- Temps de traitement       : 0,023 secondes
+- Entrees/seconde           : 21739

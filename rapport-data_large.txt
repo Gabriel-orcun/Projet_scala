@@ -1,0 +1,103 @@
+===============================================
+   RAPPORT D'ANALYSE - data/data_large.json
+===============================================
+
+STATISTIQUES DE PARSING
+---------------------------
+- Entrees totales lues      : 10000
+- Entrees valides           : 10000
+- Erreurs de parsing        : 0
+- Doublons supprimes        : 0
+
+TOP 10 - BUTEURS
+-------------------
+1. João Fernandes            : 45 buts en 17 matchs
+2. João Fernandes 1          : 45 buts en 17 matchs
+3. João Fernandes 2          : 45 buts en 17 matchs
+4. João Fernandes 3          : 45 buts en 17 matchs
+5. João Fernandes 4          : 45 buts en 17 matchs
+6. João Fernandes 5          : 45 buts en 17 matchs
+7. João Fernandes 6          : 45 buts en 17 matchs
+8. João Fernandes 7          : 45 buts en 17 matchs
+9. João Fernandes 8          : 45 buts en 17 matchs
+10. João Fernandes 9          : 45 buts en 17 matchs
+
+TOP 10 - PASSEURS
+---------------------
+1. Jack Silva                : 20 passes en 29 matchs
+2. Jadon Rice                : 20 passes en 36 matchs
+3. Jack Silva 1              : 20 passes en 29 matchs
+4. Jadon Rice 1              : 20 passes en 36 matchs
+5. Jack Silva 2              : 20 passes en 29 matchs
+6. Jadon Rice 2              : 20 passes en 36 matchs
+7. Jack Silva 3              : 20 passes en 29 matchs
+8. Jadon Rice 3              : 20 passes en 36 matchs
+9. Jack Silva 4              : 20 passes en 29 matchs
+10. Jadon Rice 4              : 20 passes en 36 matchs
+
+TOP 10 - VALEUR MARCHANDE
+-----------------------------
+1. Vinicius Alexander-Arnold : 179 M EUR
+2. Vinicius Alexander-Arnold 1 : 179 M EUR
+3. Vinicius Alexander-Arnold 2 : 179 M EUR
+4. Vinicius Alexander-Arnold 3 : 179 M EUR
+5. Vinicius Alexander-Arnold 4 : 179 M EUR
+6. Vinicius Alexander-Arnold 5 : 179 M EUR
+7. Vinicius Alexander-Arnold 6 : 179 M EUR
+8. Vinicius Alexander-Arnold 7 : 179 M EUR
+9. Vinicius Alexander-Arnold 8 : 179 M EUR
+10. Vinicius Alexander-Arnold 9 : 179 M EUR
+
+TOP 10 - SALAIRES
+--------------------
+1. Romelu Bellingham         : 48,50 M EUR/an
+2. Romelu Bellingham 1       : 48,50 M EUR/an
+3. Romelu Bellingham 2       : 48,50 M EUR/an
+4. Romelu Bellingham 3       : 48,50 M EUR/an
+5. Romelu Bellingham 4       : 48,50 M EUR/an
+6. Romelu Bellingham 5       : 48,50 M EUR/an
+7. Romelu Bellingham 6       : 48,50 M EUR/an
+8. Romelu Bellingham 7       : 48,50 M EUR/an
+9. Romelu Bellingham 8       : 48,50 M EUR/an
+10. Romelu Bellingham 9       : 48,50 M EUR/an
+
+REPARTITION PAR LIGUE
+-------------------------
+- Ligue 1                   : 2500 joueurs
+- Premier League            : 2500 joueurs
+- La Liga                   : 2000 joueurs
+- Serie A                   : 1800 joueurs
+- Bundesliga                : 1200 joueurs
+
+REPARTITION PAR POSTE
+------------------------
+- Forward                   : 2800 joueurs
+- Defender                  : 2500 joueurs
+- Goalkeeper                : 2400 joueurs
+- Midfielder                : 2300 joueurs
+
+MOYENNES PAR POSTE
+----------------------
+AGE MOYEN :
+- Defender                  : 29,0 ans
+- Goalkeeper                : 27,9 ans
+- Forward                   : 27,1 ans
+- Midfielder                : 26,6 ans
+
+BUTS PAR MATCH (moyenne) :
+- Forward                   : 22,64 buts
+- Midfielder                : 10,26 buts
+- Defender                  : 4,32 buts
+- Goalkeeper                : 0,00 buts
+
+DISCIPLINE
+--------------
+- Total cartons jaunes      : 47300
+- Total cartons rouges      : 9500
+- Poste le plus discipline  : Goalkeeper
+- Poste le moins discipline : Midfielder
+
+PERFORMANCE
+---------------
+- Temps de traitement       : 0,150 secondes
+- Entrees/seconde           : 66667

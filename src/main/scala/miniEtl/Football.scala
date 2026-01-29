@@ -32,43 +32,6 @@ case class TopPlayer(
     matches:    Int
 )
 
-/*
-case class TopTenScored(
-    top_10_Scored:      List[TopPlayer]
-)
-
-case class TopTenAssisters(
-    top10Assisters:         List[TopPlayer]
-)
-
-case class MostValuablePlayers(
-    mostValuablePlayers:    List[TopPlayer]
-    )
-
-case class HighestPaidPlayers(
-    highest_paid_players:   List[TopPlayer]
-    )
-
-case class PlayersByLeague(
-    league:     String,
-    number:     Int
-)
-
-case class PlayersByPosition(
-   position:    String,
-   number:      Int
-)
-
-case class AverageAgeByPosition(
-    Position:       String,
-    average_age:    Double
-)
-
-case class AverageGoalsByPosition(
-    position:       String,
-    average_goal:   Double
-)
-*/
 
 case class DisciplineStatistics(
     total_yellow_cards:         Int,

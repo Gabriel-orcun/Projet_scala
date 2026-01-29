@@ -1,9 +1,9 @@
 {
   "statistics" : {
-    "tot_players" : 100,
+    "tot_players" : 500,
     "tot_players_valid" : 100,
-    "parsing_errors" : 0,
-    "duplicated_removed" : 0
+    "parsing_errors" : 22,
+    "duplicated_removed" : 334
   },
   "top_ten_Scores" : [
     {
@@ -43,16 +43,16 @@
       "matches" : 20
     },
     {
-      "name" : "Phil Griezmann",
-      "club" : "Newcastle",
-      "value" : 31.0,
-      "matches" : 18
-    },
-    {
       "name" : "Robert Alexander-Arnold",
       "club" : "AC Milan",
       "value" : 31.0,
       "matches" : 38
+    },
+    {
+      "name" : "Phil Griezmann",
+      "club" : "Newcastle",
+      "value" : 31.0,
+      "matches" : 18
     },
     {
       "name" : "N'Golo Haaland",
@@ -117,36 +117,30 @@
       "matches" : 29
     },
     {
+      "name" : "Lionel Lewandowski",
+      "club" : "Arsenal",
+      "value" : 16.0,
+      "matches" : 18
+    },
+    {
       "name" : "Sergio Courtois",
       "club" : "Napoli",
       "value" : 16.0,
       "matches" : 22
-    },
-    {
-      "name" : "Pedri Ronaldo",
-      "club" : "Real Madrid",
-      "value" : 16.0,
-      "matches" : 35
     }
   ],
   "most_valuable_players" : [
     {
-      "name" : "Vinicius Alexander-Arnold",
-      "club" : "RB Leipzig",
-      "value" : 179.0,
-      "matches" : 21
+      "name" : "Pedri Ronaldo",
+      "club" : "Real Madrid",
+      "value" : 174.0,
+      "matches" : 35
     },
     {
       "name" : "João Fernandes",
       "club" : "Tottenham",
       "value" : 174.0,
       "matches" : 17
-    },
-    {
-      "name" : "Pedri Ronaldo",
-      "club" : "Real Madrid",
-      "value" : 174.0,
-      "matches" : 35
     },
     {
       "name" : "Raheem Alexander-Arnold",
@@ -189,6 +183,12 @@
       "club" : "Tottenham",
       "value" : 147.0,
       "matches" : 13
+    },
+    {
+      "name" : "Mason Foden",
+      "club" : "Inter Milan",
+      "value" : 137.0,
+      "matches" : 27
     }
   ],
   "highest_paid_players" : [
@@ -262,26 +262,26 @@
   },
   "players_by_position" : {
     "Midfielder" : 23,
-    "Forward" : 28,
-    "Goalkeeper" : 24,
+    "Forward" : 29,
+    "Goalkeeper" : 23,
     "Defender" : 25
   },
   "average_age_by_position" : {
     "Midfielder" : 26.565217391304348,
-    "Forward" : 27.071428571428573,
-    "Goalkeeper" : 27.875,
+    "Forward" : 27.103448275862068,
+    "Goalkeeper" : 27.869565217391305,
     "Defender" : 29.04
   },
   "average_goals_by_position" : {
     "Midfielder" : 10.26086956521739,
-    "Forward" : 22.642857142857142,
+    "Forward" : 21.862068965517242,
     "Goalkeeper" : 0.0,
     "Defender" : 4.32
   },
   "discipline_statistics" : {
     "total_yellow_cards" : 473,
     "total_red_cards" : 95,
-    "most_disciplined_position" : "Goalkeeper",
+    "most_disciplined_position" : "Forward",
     "least_disciplined_position" : "Midfielder"
   }
 }
