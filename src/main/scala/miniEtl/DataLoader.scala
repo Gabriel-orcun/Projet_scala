@@ -8,7 +8,7 @@ import scala.util.{Try, Success, Failure}
 
 
 object DataLoader{
-    def loadFootball(filename: String): Either[String, List[Football]] = {
+    def loadPlayers(filename: String): Either[String, List[Player]] = {
         Try {
             val source = Source.fromFile(filename)
             val content = source.mkString
@@ -21,8 +21,8 @@ object DataLoader{
                     case Left(error) => Left(s"Parsing error: ${error.getMessage}")
                     case Right(json) => 
                         val listJson = json.asArray.getOrElse(Vector())
-                        val players: List[Football] = listJson.flatMap(
-                            j => j.as[Football].toOption
+                        val players: List[Player] = listJson.flatMap(
+                            j => j.as[Player].toOption
                         ).toList
                         Right(players) 
                 }

@@ -1,6 +1,6 @@
 package miniEtl
 
-case class Football(
+case class Player(
   id:               Int,
   name:             String,
   age:              Int,
@@ -14,15 +14,14 @@ case class Football(
   yellowCards:      Int,
   redCards:         Int,
   marketValue:      Option[Int],
-  salary:           Option[Double] 
+  salary:           Option[Double]
 )
 
-case class FootballStats(
-    tot_players:            Int,
-    tot_players_valid:      Int,
-    parsing_errors:         Int,
-    duplicated_removed:     Int
-
+case class EtlStats(
+    totalEntries:         Int,
+    validEntries:         Int,
+    parsingErrors:        Int,
+    duplicatesRemoved:    Int
 )
 
 case class TopPlayer(
@@ -32,24 +31,23 @@ case class TopPlayer(
     matches:    Int
 )
 
-
-case class DisciplineStatistics(
-    total_yellow_cards:         Int,
-    total_red_cards:            Int,
-    most_disciplined_position:  String,
-    least_disciplined_position: String
+case class DisciplineStats(
+    totalYellowCards:         Int,
+    totalRedCards:            Int,
+    mostDisciplinedPosition:  String,
+    leastDisciplinedPosition: String
 )
 
 case class AnalysisReport(
-    statistics:                 FootballStats,
-    top_ten_Scores:             List[TopPlayer],
-    top_ten_assisters:          List[TopPlayer],
-    most_valuable_players:      List[TopPlayer],
-    highest_paid_players:       List[TopPlayer],
-    players_by_league:          Map[String,Int],
-    players_by_position:        Map[String,Int],
-    average_age_by_position:    Map[String,Double],
-    average_goals_by_position:  Map[String,Double],
-    discipline_statistics:      DisciplineStatistics
+    etlStats:                   EtlStats,
+    topTenScorers:              List[TopPlayer],
+    topTenAssisters:            List[TopPlayer],
+    mostValuablePlayers:        List[TopPlayer],
+    highestPaidPlayers:         List[TopPlayer],
+    playersByLeague:            Map[String,Int],
+    playersByPosition:          Map[String,Int],
+    averageAgeByPosition:       Map[String,Double],
+    averageGoalsByPosition:     Map[String,Double],
+    disciplineStats:            DisciplineStats
 )
 

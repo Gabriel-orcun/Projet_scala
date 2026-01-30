@@ -9,18 +9,18 @@ import scala.util.Try
 import miniEtl.StatsCalculator.*
 
 object ReportGenerator {
-    def geratereport(players: List[Football], filename: String): AnalysisReport = {
+    def generateReport(players: List[Player], filename: String): AnalysisReport = {
         AnalysisReport(
-            footballStats(filename),
-            topScores(players),
-            topTenAssisters(players),
-            mostValuablePlayers(players),
-            highestpPaidPlayers(players),
-            playersByLeague(players),
-            playersByPosition(players),
-            averageAgeByPosition(players),
-            averageGoalsByPosition(players),
-            disciplineStatistics(players)
+            etlStats = calculateEtlStats(filename),
+            topTenScorers = calculateTopScorers(players),
+            topTenAssisters = calculateTopAssisters(players),
+            mostValuablePlayers = calculateMostValuablePlayers(players),
+            highestPaidPlayers = calculateHighestPaidPlayers(players),
+            playersByLeague = countPlayersByLeague(players),
+            playersByPosition = countPlayersByPosition(players),
+            averageAgeByPosition = calculateAverageAgeByPosition(players),
+            averageGoalsByPosition = calculateAverageGoalsByPosition(players),
+            disciplineStats = calculateDisciplineStats(players)
         )
     }
 

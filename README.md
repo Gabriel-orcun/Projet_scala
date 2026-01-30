@@ -16,7 +16,7 @@ Le projet est organisé en plusieurs modules, chacun ayant une responsabilité s
 
 ```
 src/main/scala/miniEtl/
-├── Football.scala          # Modèles de données (case classes)
+├── Football.scala          # Modèles de données (case classes Player, EtlStats, etc.)
 ├── DataLoader.scala        # Chargement et analyse des données JSON
 ├── DataValidator.scala     # Validation et nettoyage des données
 ├── StatsCalculator.scala   # Calculs statistiques
@@ -32,48 +32,48 @@ src/main/scala/miniEtl/
 
 Ce fichier définit les structures de données utilisées dans toute l'application.
 
-- **`Football`**: Représente un seul joueur avec tous ses attributs. `Option[T]` est utilisé pour les champs qui peuvent être manquants dans les données source (`marketValue`, `salary`), évitant ainsi les `NullPointerException`.
-- **`FootballStats`**: Capture les statistiques sur le processus de chargement et de validation des données (par exemple, nombre total de joueurs, erreurs d'analyse, doublons supprimés).
+- **`Player`**: Représente un seul joueur avec tous ses attributs. `Option[T]` est utilisé pour les champs qui peuvent être manquants dans les données source (`marketValue`, `salary`), évitant ainsi les `NullPointerException`.
+- **`EtlStats`**: Capture les statistiques sur le processus de chargement et de validation des données (par exemple, nombre total de joueurs, erreurs d'analyse, doublons supprimés).
 - **`TopPlayer`**: Une structure générique pour représenter un joueur dans une liste de top 10 (par exemple, meilleur buteur, le plus précieux).
-- **`DisciplineStatistics`**: Contient les statistiques relatives à la discipline des joueurs (cartons jaunes/rouges).
+- **`DisciplineStats`**: Contient les statistiques relatives à la discipline des joueurs (cartons jaunes/rouges).
 - **`AnalysisReport`**: La structure de rapport principale qui regroupe toutes les statistiques générées en un seul objet pour une exportation facile.
 
 ### 2. Chargement des Données (`DataLoader.scala`)
 
 Ce module est responsable de la lecture et de l'analyse du fichier JSON d'entrée.
 
-- **`loadFootball(filename: String): Either[String, List[Football]]`**:
+- **`loadPlayers(filename: String): Either[String, List[Player]]`**:
   1.  Lit le contenu du fichier donné. Il utilise `Try` pour gérer les erreurs d'E/S potentielles (par exemple, fichier non trouvé).
   2.  Analyse le contenu de la chaîne en un objet JSON à l'aide de la bibliothèque Circe.
-  3.  Décode le tableau JSON en une `List[Football]`. Les entrées qui ne sont pas conformes à la case class `Football` sont ignorées en toute sécurité.
-  4.  Retourne `Right(List[Football])` en cas de succès ou `Left(String)` avec un message d'erreur si une étape échoue. Cette approche fonctionnelle de la gestion des erreurs évite les exceptions et rend le flux de données plus prévisible.
+  3.  Décode le tableau JSON en une `List[Player]`. Les entrées qui ne sont pas conformes à la case class `Player` sont ignorées en toute sécurité.
+  4.  Retourne `Right(List[Player])` en cas de succès ou `Left(String)` avec un message d'erreur si une étape échoue. Cette approche fonctionnelle de la gestion des erreurs évite les exceptions et rend le flux de données plus prévisible.
 
 ### 3. Validation des Données (`DataValidator.scala`)
 
 Ce module nettoie et valide les données chargées.
 
 - **`normalisePosition(pos: String): String`**: Standardise les postes des joueurs (par exemple, mappe "ATT" et "Attacker" à "Forward"). Cela garantit la cohérence pour l'analyse statistique.
-- **`isValid(player: Football): Boolean`**: Vérifie si un enregistrement de joueur respecte les règles métier requises (par exemple, le nom n'est pas vide, l'âge est dans une fourchette réaliste, les statistiques sont non négatives).
-- **`filterValid(players: List[Football]): List[Football]]`**: Une fonction pipeline qui normalise d'abord le poste de chaque joueur, puis filtre les joueurs qui ne passent pas la vérification `isValid`.
-- **`removeDuplicates(players: List[Football]): List[Football]]`**: Supprime les enregistrements de joueurs en double en fonction de leur `id` unique.
+- **`isValid(player: Player): Boolean`**: Vérifie si un enregistrement de joueur respecte les règles métier requises (par exemple, le nom n'est pas vide, l'âge est dans une fourchette réaliste, les statistiques sont non négatives).
+- **`filterValid(players: List[Player]): List[Player]`**: Une fonction pipeline qui normalise d'abord le poste de chaque joueur, puis filtre les joueurs qui ne passent pas la vérification `isValid`.
+- **`removeDuplicates(players: List[Player]): List[Player]`**: Supprime les enregistrements de joueurs en double en fonction de leur `id` unique.
 
 ### 4. Calculs Statistiques (`StatsCalculator.scala`)
 
-Ce module contient toutes les fonctions pour effectuer une analyse statistique sur les données propres. Chaque fonction prend une `List[Football]` et retourne une métrique ou une liste spécifique.
+Ce module contient toutes les fonctions pour effectuer une analyse statistique sur les données propres. Chaque fonction prend une `List[Player]` et retourne une métrique ou une liste spécifique.
 
-- **`footballStats(filename: String): FootballStats`**: Calcule les métadonnées sur le processus ETL lui-même, telles que le nombre d'erreurs d'analyse et de doublons supprimés.
-- **`topScores(players: List[Football]): List[TopPlayer]`**: Trie les joueurs par leur `goalsScored` par ordre décroissant et retourne les 10 meilleurs.
-- **`topTenAssisters`, `mostValuablePlayers`, `highestpPaidPlayers`**: Fonctions similaires qui classent les joueurs en fonction des passes décisives, de la valeur marchande et du salaire. Elles gèrent les types `Option` en toute sécurité en utilisant `getOrElse(0)`.
-- **`playersByLeague(players: List[Football]): Map[String, Int]`**: Regroupe les joueurs par leur ligue et compte le nombre de joueurs dans chacune.
-- **`playersByPosition`**: Fait de même pour les postes des joueurs.
-- **`averageAgeByPosition`, `averageGoalsByPosition`**: Calculent l'âge moyen et les buts moyens marqués pour chaque poste.
-- **`disciplineStatistics(players: List[Football]): DisciplineStatistics`**: Calcule les statistiques liées à la discipline, telles que le nombre total de cartons et les postes les plus/moins disciplinés sur la base d'un système de pénalités (un carton rouge vaut deux cartons jaunes).
+- **`calculateEtlStats(filename: String): EtlStats`**: Calcule les métadonnées sur le processus ETL lui-même, telles que le nombre d'erreurs d'analyse et de doublons supprimés.
+- **`calculateTopScorers(players: List[Player]): List[TopPlayer]`**: Trie les joueurs par leur `goalsScored` par ordre décroissant et retourne les 10 meilleurs.
+- **`calculateTopAssisters`, `calculateMostValuablePlayers`, `calculateHighestPaidPlayers`**: Fonctions similaires qui classent les joueurs en fonction des passes décisives, de la valeur marchande et du salaire. Elles gèrent les types `Option` en toute sécurité en utilisant `getOrElse(0)`.
+- **`countPlayersByLeague(players: List[Player]): Map[String, Int]`**: Regroupe les joueurs par leur ligue et compte le nombre de joueurs dans chacune.
+- **`countPlayersByPosition`**: Fait de même pour les postes des joueurs.
+- **`calculateAverageAgeByPosition`, `calculateAverageGoalsByPosition`**: Calculent l'âge moyen et les buts moyens marqués pour chaque poste.
+- **`calculateDisciplineStats(players: List[Player]): DisciplineStats`**: Calcule les statistiques liées à la discipline, telles que le nombre total de cartons et les postes les plus/moins disciplinés sur la base d'un système de pénalités (un carton rouge vaut deux cartons jaunes).
 
 ### 5. Génération de Rapport (`ReportGenerator.scala`)
 
 Ce module orchestre la création et la sortie du rapport d'analyse final.
 
-- **`geratereport(players: List[Football], filename: String): AnalysisReport`**: Cette fonction agit comme un agrégateur. Elle appelle toutes les fonctions nécessaires de `StatsCalculator` et assemble les résultats en un seul objet `AnalysisReport`.
+- **`generateReport(players: List[Player], filename: String): AnalysisReport`**: Cette fonction agit comme un agrégateur. Elle appelle toutes les fonctions nécessaires de `StatsCalculator` et assemble les résultats en un seul objet `AnalysisReport`.
 - **`writeReport(report: AnalysisReport, filename: String): Either[String, Unit]`**:
   1.  Sérialise l'objet `AnalysisReport` en une chaîne JSON formatée à l'aide de Circe.
   2.  Écrit la chaîne JSON dans le fichier de sortie spécifié (`results.json`).
@@ -84,9 +84,9 @@ Ce module orchestre la création et la sortie du rapport d'analyse final.
 C'est le point d'entrée de l'application. Il orchestre l'ensemble du pipeline ETL.
 
 - Il utilise une `for-comprehension` pour enchaîner les différentes étapes du processus ETL :
-  1.  **Charger** les joueurs depuis le fichier (`DataLoader.loadFootball`).
+  1.  **Charger** les joueurs depuis le fichier (`DataLoader.loadPlayers`).
   2.  **Valider** et **nettoyer** les données (`DataValidator.filterValid`, `DataValidator.removeDuplicates`).
-  3.  **Générer** le rapport (`ReportGenerator.geratereport`).
+  3.  **Générer** le rapport (`ReportGenerator.generateReport`).
   4.  **Écrire** le rapport dans un fichier (`ReportGenerator.writeReport`).
 - La `for-comprehension` fournit un moyen propre et lisible de gérer la monade `Either`. Si une étape retourne un `Left`, toute la chaîne est court-circuitée et l'erreur est propagée.
 - Si le pipeline se termine avec succès, il affiche un résumé formaté du rapport dans la console.

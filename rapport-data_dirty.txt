@@ -85,19 +85,16 @@ AGE MOYEN :
 - Midfielder                : 26,6 ans
 
 BUTS PAR MATCH (moyenne) :
-- Forward                   : 21,86 buts
-- Midfielder                : 10,26 buts
-- Defender                  : 4,32 buts
-- Goalkeeper                : 0,00 buts
+- Forward                   : 21,86 buts/match
+- Midfielder                : 10,26 buts/match
+- Defender                  : 4,32 buts/match
+- Goalkeeper                : 0,00 buts/match
 
-DISCIPLINE
---------------
+STATISTIQUES DISCIPLINAIRES
+-----------------------------
 - Total cartons jaunes      : 473
 - Total cartons rouges      : 95
 - Poste le plus discipline  : Forward
 - Poste le moins discipline : Midfielder
 
-PERFORMANCE
----------------
-- Temps de traitement       : 0,023 secondes
-- Entrees/seconde           : 21739
+Temps de traitement total : 0,03 secondes

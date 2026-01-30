@@ -14,7 +14,7 @@ object Main extends App {
     val startTime = System.currentTimeMillis()
 
     val result = for {
-      players <- DataLoader.loadFootball(filename)
+      players <- DataLoader.loadPlayers(filename)
       _ = println(s"${players.length} joueurs charges")
       
       validPlayers = DataValidator.filterValid(players)
@@ -23,7 +23,7 @@ object Main extends App {
       finalPlayers = DataValidator.removeDuplicates(validPlayers)
       _ = println(s"${finalPlayers.length} joueurs finaux (${validPlayers.length - finalPlayers.length} doublons supprimes)")
       
-      report = ReportGenerator.geratereport(finalPlayers, filename)
+      report = ReportGenerator.generateReport(finalPlayers, filename)
       _ = println("Rapport genere")
       
       jsonOutputFilename = filename.replace("data/", "report-").replace(".json", ".json")
@@ -42,49 +42,49 @@ object Main extends App {
 
         sb.append("STATISTIQUES DE PARSING\n")
         sb.append("---------------------------\n")
-        sb.append(f"- Entrees totales lues      : ${report.statistics.tot_players}\n")
-        sb.append(f"- Entrees valides           : ${report.statistics.tot_players_valid}\n")
-        sb.append(f"- Erreurs de parsing        : ${report.statistics.parsing_errors}\n")
-        sb.append(f"- Doublons supprimes        : ${report.statistics.duplicated_removed}\n\n")
+        sb.append(f"- Entrees totales lues      : ${report.etlStats.totalEntries}\n")
+        sb.append(f"- Entrees valides           : ${report.etlStats.validEntries}\n")
+        sb.append(f"- Erreurs de parsing        : ${report.etlStats.parsingErrors}\n")
+        sb.append(f"- Doublons supprimes        : ${report.etlStats.duplicatesRemoved}\n\n")
         
         sb.append("TOP 10 - BUTEURS\n")
         sb.append("-------------------\n")
-        report.top_ten_Scores.zipWithIndex.foreach { case (player, idx) =>
+        report.topTenScorers.zipWithIndex.foreach { case (player, idx) =>
           sb.append(f"${idx + 1}. ${player.name}%-25s : ${player.value.toInt} buts en ${player.matches} matchs\n")
         }
         sb.append("\n")
 
         sb.append("TOP 10 - PASSEURS\n")
         sb.append("---------------------\n")
-        report.top_ten_assisters.zipWithIndex.foreach { case (player, idx) =>
+        report.topTenAssisters.zipWithIndex.foreach { case (player, idx) =>
           sb.append(f"${idx + 1}. ${player.name}%-25s : ${player.value.toInt} passes en ${player.matches} matchs\n")
         }
         sb.append("\n")
 
         sb.append("TOP 10 - VALEUR MARCHANDE\n")
         sb.append("-----------------------------\n")
-        report.most_valuable_players.zipWithIndex.foreach { case (player, idx) =>
+        report.mostValuablePlayers.zipWithIndex.foreach { case (player, idx) =>
           sb.append(f"${idx + 1}. ${player.name}%-25s : ${player.value.toInt} M EUR\n")
         }
         sb.append("\n")
 
         sb.append("TOP 10 - SALAIRES\n")
         sb.append("--------------------\n")
-        report.highest_paid_players.zipWithIndex.foreach { case (player, idx) =>
+        report.highestPaidPlayers.zipWithIndex.foreach { case (player, idx) =>
           sb.append(f"${idx + 1}. ${player.name}%-25s : ${player.value}%.2f M EUR/an\n")
         }
         sb.append("\n")
 
         sb.append("REPARTITION PAR LIGUE\n")
         sb.append("-------------------------\n")
-        report.players_by_league.toList.sortBy(-_._2).foreach { case (league, count) =>
+        report.playersByLeague.toList.sortBy(-_._2).foreach { case (league, count) =>
           sb.append(f"- ${league}%-25s : $count joueurs\n")
         }
         sb.append("\n")
 
         sb.append("REPARTITION PAR POSTE\n")
         sb.append("------------------------\n")
-        report.players_by_position.toList.sortBy(-_._2).foreach { case (position, count) =>
+        report.playersByPosition.toList.sortBy(-_._2).foreach { case (position, count) =>
           sb.append(f"- ${position}%-25s : $count joueurs\n")
         }
         sb.append("\n")
@@ -92,34 +92,28 @@ object Main extends App {
         sb.append("MOYENNES PAR POSTE\n")
         sb.append("----------------------\n")
         sb.append("AGE MOYEN :\n")
-        report.average_age_by_position.toList.sortBy(-_._2).foreach { case (position, avg) =>
+        report.averageAgeByPosition.toList.sortBy(-_._2).foreach { case (position, avg) =>
           sb.append(f"- ${position}%-25s : $avg%.1f ans\n")
         }
         sb.append("\n")
 
         sb.append("BUTS PAR MATCH (moyenne) :\n")
-        report.average_goals_by_position.toList.sortBy(-_._2).foreach { case (position, avg) =>
-          sb.append(f"- ${position}%-25s : $avg%.2f buts\n")
+        report.averageGoalsByPosition.toList.sortBy(-_._2).foreach { case (position, avg) =>
+          sb.append(f"- ${position}%-25s : $avg%.2f buts/match\n")
         }
         sb.append("\n")
 
-        sb.append("DISCIPLINE\n")
-        sb.append("--------------\n")
-        sb.append(f"- Total cartons jaunes      : ${report.discipline_statistics.total_yellow_cards}\n")
-        sb.append(f"- Total cartons rouges      : ${report.discipline_statistics.total_red_cards}\n")
-        sb.append(f"- Poste le plus discipline  : ${report.discipline_statistics.most_disciplined_position}\n")
-        sb.append(f"- Poste le moins discipline : ${report.discipline_statistics.least_disciplined_position}\n\n")
-        
+        sb.append("STATISTIQUES DISCIPLINAIRES\n")
+        sb.append("-----------------------------\n")
+        sb.append(f"- Total cartons jaunes      : ${report.disciplineStats.totalYellowCards}\n")
+        sb.append(f"- Total cartons rouges      : ${report.disciplineStats.totalRedCards}\n")
+        sb.append(f"- Poste le plus discipline  : ${report.disciplineStats.mostDisciplinedPosition}\n")
+        sb.append(f"- Poste le moins discipline : ${report.disciplineStats.leastDisciplinedPosition}\n\n")
+
         val endTime = System.currentTimeMillis()
         val duration = (endTime - startTime) / 1000.0
-        val entriesPerSecond = if (duration > 0) report.statistics.tot_players / duration else 0.0
-        
-        sb.append("PERFORMANCE\n")
-        sb.append("---------------\n")
-        sb.append(f"- Temps de traitement       : $duration%.3f secondes\n")
-        sb.append(f"- Entrees/seconde           : $entriesPerSecond%.0f\n")
-        
-        sb.toString()
+        sb.append(f"Temps de traitement total : $duration%.2f secondes\n")
+        sb.toString
 
       case Left(error) =>
         s"ERREUR lors du traitement de $filename: $error"

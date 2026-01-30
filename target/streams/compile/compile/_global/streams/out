@@ -1,7 +1,23 @@
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E006] Not Found Error: /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/src/main/scala/miniEtl/DataValidator.scala:18:4 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m18 |[0m    validPositions.contains(player.position) &&[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m    ^^^^^^^^^^^^^^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m    Not found: validPositions[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- Error: /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/src/main/scala/miniEtl/ReportGenerator.scala:19:32 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m19 |[0m            playerCountByLeague = countPlayersByLeague(players),[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[33mmethod[0m [35mapply[0m in [33mobject[0m [35mAnalysisReport[0m: (etlStats: miniEtl.EtlStats, topTenScorers: List[miniEtl.TopPlayer],[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  topTenAssisters: List[miniEtl.TopPlayer],[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  mostValuablePlayers: List[miniEtl.TopPlayer],[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  highestPaidPlayers: List[miniEtl.TopPlayer],[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  playersByLeague: Map[String, Int], playersByPosition: Map[String, Int],[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  averageAgeByPosition: Map[String, Double],[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  averageGoalsByPosition: Map[String, Double], disciplineStats:[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  miniEtl.DisciplineStats): miniEtl.AnalysisReport does not have a parameter playerCountByLeague[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- Error: /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/src/main/scala/miniEtl/ReportGenerator.scala:20:34 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m20 |[0m            playerCountByPosition = countPlayersByPosition(players),[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[33mmethod[0m [35mapply[0m in [33mobject[0m [35mAnalysisReport[0m: (etlStats: miniEtl.EtlStats, topTenScorers: List[miniEtl.TopPlayer],[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  topTenAssisters: List[miniEtl.TopPlayer],[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  mostValuablePlayers: List[miniEtl.TopPlayer],[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  highestPaidPlayers: List[miniEtl.TopPlayer],[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  playersByLeague: Map[String, Int], playersByPosition: Map[String, Int],[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  averageAgeByPosition: Map[String, Double],[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  averageGoalsByPosition: Map[String, Double], disciplineStats:[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  miniEtl.DisciplineStats): miniEtl.AnalysisReport does not have a parameter playerCountByPosition[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

@@ -14,7 +14,7 @@ object DataValidator {
 
  
 
-  def isValid(player: Football): Boolean = {
+  def isValid(player: Player): Boolean = {
     player.name.trim.nonEmpty &&
     player.nationality.trim.nonEmpty &&
     player.position.trim.nonEmpty &&
@@ -26,14 +26,14 @@ object DataValidator {
     player.matchesPlayed > 0
   }
 
-  def filterValid(players: List[Football]): List[Football] = {
+  def filterValid(players: List[Player]): List[Player] = {
     players
     .map(player => player.copy(position = normalisePosition(player.position)))
     .filter(isValid)
   }
 
 
-  def removeDuplicates(players: List[Football]): List[Football] = {
+  def removeDuplicates(players: List[Player]): List[Player] = {
     players.distinctBy(_.id)
 
   }

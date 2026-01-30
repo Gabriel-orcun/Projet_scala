@@ -1,11 +1,11 @@
 {
-  "statistics" : {
-    "tot_players" : 500,
-    "tot_players_valid" : 100,
-    "parsing_errors" : 22,
-    "duplicated_removed" : 334
+  "etlStats" : {
+    "totalEntries" : 500,
+    "validEntries" : 100,
+    "parsingErrors" : 22,
+    "duplicatesRemoved" : 334
   },
-  "top_ten_Scores" : [
+  "topTenScorers" : [
     {
       "name" : "João Fernandes",
       "club" : "Tottenham",
@@ -67,7 +67,7 @@
       "matches" : 22
     }
   ],
-  "top_ten_assisters" : [
+  "topTenAssisters" : [
     {
       "name" : "Jack Silva",
       "club" : "Roma",
@@ -129,7 +129,7 @@
       "matches" : 22
     }
   ],
-  "most_valuable_players" : [
+  "mostValuablePlayers" : [
     {
       "name" : "Pedri Ronaldo",
       "club" : "Real Madrid",
@@ -191,7 +191,7 @@
       "matches" : 27
     }
   ],
-  "highest_paid_players" : [
+  "highestPaidPlayers" : [
     {
       "name" : "Romelu Bellingham",
       "club" : "Nice",
@@ -253,35 +253,35 @@
       "matches" : 18
     }
   ],
-  "players_by_league" : {
+  "playersByLeague" : {
     "Ligue 1" : 25,
     "Bundesliga" : 12,
     "Serie A" : 18,
     "La Liga" : 20,
     "Premier League" : 25
   },
-  "players_by_position" : {
+  "playersByPosition" : {
     "Midfielder" : 23,
     "Forward" : 29,
     "Goalkeeper" : 23,
     "Defender" : 25
   },
-  "average_age_by_position" : {
+  "averageAgeByPosition" : {
     "Midfielder" : 26.565217391304348,
     "Forward" : 27.103448275862068,
     "Goalkeeper" : 27.869565217391305,
     "Defender" : 29.04
   },
-  "average_goals_by_position" : {
+  "averageGoalsByPosition" : {
     "Midfielder" : 10.26086956521739,
     "Forward" : 21.862068965517242,
     "Goalkeeper" : 0.0,
     "Defender" : 4.32
   },
-  "discipline_statistics" : {
-    "total_yellow_cards" : 473,
-    "total_red_cards" : 95,
-    "most_disciplined_position" : "Forward",
-    "least_disciplined_position" : "Midfielder"
+  "disciplineStats" : {
+    "totalYellowCards" : 473,
+    "totalRedCards" : 95,
+    "mostDisciplinedPosition" : "Forward",
+    "leastDisciplinedPosition" : "Midfielder"
   }
 }
