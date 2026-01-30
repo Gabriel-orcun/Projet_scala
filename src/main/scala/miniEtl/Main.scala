@@ -103,6 +103,37 @@ object Main extends App {
         }
         sb.append("\n")
 
+        sb.append("TOP 10 - EFFICACITE (buts/match)\n")
+        sb.append("--------------------------------\n")
+        report.topTenEfficient.zipWithIndex.foreach { case (player, idx) =>
+          sb.append(f"${idx + 1}. ${player.name}%-25s : ${player.value}%.2f buts/match\n")
+        }
+        sb.append("\n")
+
+        sb.append("TOP 10 - RAPPORT QUALITE-PRIX\n")
+        sb.append("------------------------------\n")
+        report.topTenQualityPrice.zipWithIndex.foreach { case (player, idx) =>
+          sb.append(f"${idx + 1}. ${player.name}%-25s : ${player.value}%.1f\n")
+        }
+        sb.append("\n")
+
+        sb.append("MOYENNES PAR LIGUE\n")
+        sb.append("------------------\n")
+        sb.append("AGE MOYEN :\n")
+        report.averageAgeByLeague.toList.sortBy(-_._2).foreach { case (league, avg) =>
+          sb.append(f"- ${league}%-25s : $avg%.1f ans\n")
+        }
+        sb.append("\n")
+
+        sb.append("Moyenne de but par league :\n")
+        report.averageGoalsByLeague.toList.sortBy(-_._2).foreach { case (league, avg) =>
+          sb.append(f"- ${league}%-25s : $avg%.2f buts/match\n")
+        }
+        sb.append("\n")
+
+        val mostEfficientLeague = report.averageGoalsByLeague.toList.sortBy(-_._2).head._1
+        sb.append(f"LIGUE LA PLUS EFFICACE : $mostEfficientLeague\n\n")
+
         sb.append("STATISTIQUES DISCIPLINAIRES\n")
         sb.append("-----------------------------\n")
         sb.append(f"- Total cartons jaunes      : ${report.disciplineStats.totalYellowCards}\n")

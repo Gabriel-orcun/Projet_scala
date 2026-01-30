@@ -283,5 +283,143 @@
     "totalRedCards" : 95,
     "mostDisciplinedPosition" : "Forward",
     "leastDisciplinedPosition" : "Midfielder"
+  },
+  "topTenEfficient" : [
+    {
+      "name" : "N'Golo Haaland",
+      "club" : "Union Berlin",
+      "value" : 3.1,
+      "matches" : 10
+    },
+    {
+      "name" : "João Fernandes",
+      "club" : "Tottenham",
+      "value" : 2.6470588235294117,
+      "matches" : 17
+    },
+    {
+      "name" : "Phil Salah",
+      "club" : "Sevilla",
+      "value" : 2.3333333333333335,
+      "matches" : 18
+    },
+    {
+      "name" : "Vinicius Alexander-Arnold",
+      "club" : "RB Leipzig",
+      "value" : 1.7619047619047619,
+      "matches" : 21
+    },
+    {
+      "name" : "Phil Griezmann",
+      "club" : "Newcastle",
+      "value" : 1.7222222222222223,
+      "matches" : 18
+    },
+    {
+      "name" : "Declan Jr",
+      "club" : "Borussia Dortmund",
+      "value" : 1.65,
+      "matches" : 20
+    },
+    {
+      "name" : "Neymar Rice",
+      "club" : "Borussia Dortmund",
+      "value" : 1.5357142857142858,
+      "matches" : 28
+    },
+    {
+      "name" : "Virgil Alexander-Arnold",
+      "club" : "Tottenham",
+      "value" : 1.4166666666666667,
+      "matches" : 12
+    },
+    {
+      "name" : "Antoine Camavinga",
+      "club" : "Tottenham",
+      "value" : 1.3076923076923077,
+      "matches" : 13
+    },
+    {
+      "name" : "Romelu De Bruyne",
+      "club" : "Bayern Munich",
+      "value" : 1.2666666666666666,
+      "matches" : 30
+    }
+  ],
+  "topTenQualityPrice" : [
+    {
+      "name" : "Neymar Rice",
+      "club" : "Borussia Dortmund",
+      "value" : 43.0,
+      "matches" : 28
+    },
+    {
+      "name" : "Robert Alexander-Arnold",
+      "club" : "AC Milan",
+      "value" : 31.0,
+      "matches" : 38
+    },
+    {
+      "name" : "N'Golo Haaland",
+      "club" : "Union Berlin",
+      "value" : 31.0,
+      "matches" : 10
+    },
+    {
+      "name" : "Neymar Courtois",
+      "club" : "Valencia",
+      "value" : 26.0,
+      "matches" : 22
+    },
+    {
+      "name" : "Bukayo Páez",
+      "club" : "Bayer Leverkusen",
+      "value" : 21.0,
+      "matches" : 26
+    },
+    {
+      "name" : "Kevin Heung-min",
+      "club" : "Newcastle",
+      "value" : 20.0,
+      "matches" : 24
+    },
+    {
+      "name" : "Mason Foden",
+      "club" : "Real Betis",
+      "value" : 19.0,
+      "matches" : 29
+    },
+    {
+      "name" : "Lionel Lewandowski",
+      "club" : "Arsenal",
+      "value" : 18.0,
+      "matches" : 18
+    },
+    {
+      "name" : "Virgil Alexander-Arnold",
+      "club" : "Tottenham",
+      "value" : 17.0,
+      "matches" : 12
+    },
+    {
+      "name" : "Antoine Camavinga",
+      "club" : "Tottenham",
+      "value" : 17.0,
+      "matches" : 13
+    }
+  ],
+  "averageAgeByLeague" : {
+    "Ligue 1" : 26.6,
+    "Bundesliga" : 28.583333333333332,
+    "Serie A" : 27.72222222222222,
+    "La Liga" : 26.6,
+    "Premier League" : 29.0
+  },
+  "averageGoalsByLeague" : {
+    "Ligue 1" : 0.26791277258566976,
+    "Bundesliga" : 0.7777777777777778,
+    "Serie A" : 0.3090128755364807,
+    "La Liga" : 0.31902985074626866,
+    "Premier League" : 0.4740484429065744
   }
 }

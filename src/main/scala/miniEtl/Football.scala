@@ -52,6 +52,10 @@ case class AnalysisReport(
     playersByPosition:          Map[String,Int],
     averageAgeByPosition:       Map[String,Double],
     averageGoalsByPosition:     Map[String,Double],
-    disciplineStats:            DisciplineStats
+    disciplineStats:            DisciplineStats,
+    topTenEfficient:            List[TopPlayer], //Bonus 4 derniere lignes
+    topTenQualityPrice:         List[TopPlayer],
+    averageAgeByLeague:         Map[String,Double],
+    averageGoalsByLeague:       Map[String,Double]
 )
 

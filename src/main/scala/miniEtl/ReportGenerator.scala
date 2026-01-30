@@ -7,6 +7,7 @@ import java.nio.file.{Files, Paths}
 import java.nio.charset.StandardCharsets
 import scala.util.Try
 import miniEtl.StatsCalculator.*
+import miniEtl.Bonus.*
 
 object ReportGenerator {
   // Fonction qui produit notre rapport en instanciant un analysis report en sortie
@@ -21,7 +22,11 @@ object ReportGenerator {
             playersByPosition = countPlayersByPosition(players),
             averageAgeByPosition = calculateAverageAgeByPosition(players),
             averageGoalsByPosition = calculateAverageGoalsByPosition(players),
-            disciplineStats = calculateDisciplineStats(players)
+            disciplineStats = calculateDisciplineStats(players),
+            topTenEfficient = topTenEfficient(players),
+            topTenQualityPrice = topTenQualityPrice(players),
+            averageAgeByLeague = calculateAverageAgeByLeague(players),
+            averageGoalsByLeague = calculateAverageGoalsByLeague(players)
         )
     }
 // Classe qui va créer le rapport et l'écrire

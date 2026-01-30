@@ -1,5 +1,7 @@
 # Projet Mini-ETL Football
 
+Projet réalisé par Orcun Gabriel et Nika Zarubina.
+
 Ce projet implémente un mini pipeline ETL (Extract, Transform, Load) en Scala pour traiter et analyser les données des joueurs de football à partir de fichiers JSON. Il suit les principes de la programmation fonctionnelle pour la robustesse et la clarté.
 
 ## 🚀 Fonctionnalités

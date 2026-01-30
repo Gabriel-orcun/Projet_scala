@@ -4,6 +4,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl[0m
 [0m[[0m[0mdebug[0m] [0m[0m	miniEtl/DataValidator.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl/DataValidator.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	miniEtl/ReportGenerator$$anon$8.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl/ReportGenerator$$anon$8.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	miniEtl/DataValidator$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl/DataValidator$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	miniEtl/Main$.class[0m
@@ -22,6 +24,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl/TopPlayer.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	miniEtl/ReportGenerator$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl/ReportGenerator$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	miniEtl/Bonus$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl/Bonus$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	miniEtl/DataLoader$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl/DataLoader$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	miniEtl/Player$.class[0m
@@ -30,6 +34,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl/AnalysisReport.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	miniEtl/ReportGenerator.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl/ReportGenerator.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	miniEtl/ReportGenerator$$anon$9.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl/ReportGenerator$$anon$9.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	miniEtl/TopPlayer.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl/TopPlayer.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	miniEtl/DataLoader$$anon$1.class[0m
@@ -54,6 +60,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl/ReportGenerator$$anon$5.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	miniEtl/DataLoader.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl/DataLoader.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	miniEtl/Bonus.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl/Bonus.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	miniEtl/Player.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl/Player.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	miniEtl/ReportGenerator$$anon$7.class[0m
@@ -66,6 +74,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl/DisciplineStats$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	miniEtl/Player.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl/Player.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	miniEtl/Bonus.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl/Bonus.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	miniEtl/Main.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/orcungabriel/Desktop/Projet_scala/fp-scala-seance6-students/target/scala-3.3.7/classes/miniEtl/Main.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	miniEtl/EtlStats.tasty[0m

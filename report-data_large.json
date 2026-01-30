@@ -283,5 +283,143 @@
     "totalRedCards" : 9500,
     "mostDisciplinedPosition" : "Goalkeeper",
     "leastDisciplinedPosition" : "Midfielder"
+  },
+  "topTenEfficient" : [
+    {
+      "name" : "N'Golo Haaland",
+      "club" : "Union Berlin",
+      "value" : 3.1,
+      "matches" : 10
+    },
+    {
+      "name" : "N'Golo Haaland 1",
+      "club" : "Union Berlin",
+      "value" : 3.1,
+      "matches" : 10
+    },
+    {
+      "name" : "N'Golo Haaland 2",
+      "club" : "Union Berlin",
+      "value" : 3.1,
+      "matches" : 10
+    },
+    {
+      "name" : "N'Golo Haaland 3",
+      "club" : "Union Berlin",
+      "value" : 3.1,
+      "matches" : 10
+    },
+    {
+      "name" : "N'Golo Haaland 4",
+      "club" : "Union Berlin",
+      "value" : 3.1,
+      "matches" : 10
+    },
+    {
+      "name" : "N'Golo Haaland 5",
+      "club" : "Union Berlin",
+      "value" : 3.1,
+      "matches" : 10
+    },
+    {
+      "name" : "N'Golo Haaland 6",
+      "club" : "Union Berlin",
+      "value" : 3.1,
+      "matches" : 10
+    },
+    {
+      "name" : "N'Golo Haaland 7",
+      "club" : "Union Berlin",
+      "value" : 3.1,
+      "matches" : 10
+    },
+    {
+      "name" : "N'Golo Haaland 8",
+      "club" : "Union Berlin",
+      "value" : 3.1,
+      "matches" : 10
+    },
+    {
+      "name" : "N'Golo Haaland 9",
+      "club" : "Union Berlin",
+      "value" : 3.1,
+      "matches" : 10
+    }
+  ],
+  "topTenQualityPrice" : [
+    {
+      "name" : "Neymar Rice",
+      "club" : "Borussia Dortmund",
+      "value" : 43.0,
+      "matches" : 28
+    },
+    {
+      "name" : "Neymar Rice 1",
+      "club" : "Borussia Dortmund",
+      "value" : 43.0,
+      "matches" : 28
+    },
+    {
+      "name" : "Neymar Rice 2",
+      "club" : "Borussia Dortmund",
+      "value" : 43.0,
+      "matches" : 28
+    },
+    {
+      "name" : "Neymar Rice 3",
+      "club" : "Borussia Dortmund",
+      "value" : 43.0,
+      "matches" : 28
+    },
+    {
+      "name" : "Neymar Rice 4",
+      "club" : "Borussia Dortmund",
+      "value" : 43.0,
+      "matches" : 28
+    },
+    {
+      "name" : "Neymar Rice 5",
+      "club" : "Borussia Dortmund",
+      "value" : 43.0,
+      "matches" : 28
+    },
+    {
+      "name" : "Neymar Rice 6",
+      "club" : "Borussia Dortmund",
+      "value" : 43.0,
+      "matches" : 28
+    },
+    {
+      "name" : "Neymar Rice 7",
+      "club" : "Borussia Dortmund",
+      "value" : 43.0,
+      "matches" : 28
+    },
+    {
+      "name" : "Neymar Rice 8",
+      "club" : "Borussia Dortmund",
+      "value" : 43.0,
+      "matches" : 28
+    },
+    {
+      "name" : "Neymar Rice 9",
+      "club" : "Borussia Dortmund",
+      "value" : 43.0,
+      "matches" : 28
+    }
+  ],
+  "averageAgeByLeague" : {
+    "Ligue 1" : 26.6,
+    "Bundesliga" : 28.583333333333332,
+    "Serie A" : 27.72222222222222,
+    "La Liga" : 26.6,
+    "Premier League" : 29.0
+  },
+  "averageGoalsByLeague" : {
+    "Ligue 1" : 0.26791277258566976,
+    "Bundesliga" : 0.7777777777777778,
+    "Serie A" : 0.3090128755364807,
+    "La Liga" : 0.31902985074626866,
+    "Premier League" : 0.4740484429065744
   }
 }

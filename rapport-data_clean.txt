@@ -90,6 +90,50 @@ BUTS PAR MATCH (moyenne) :
 - Defender                  : 4,32 buts/match
 - Goalkeeper                : 0,00 buts/match
 
+TOP 10 - EFFICACITE (buts/match)
+--------------------------------
+1. N'Golo Haaland            : 3,10 buts/match
+2. João Fernandes            : 2,65 buts/match
+3. Phil Salah                : 2,33 buts/match
+4. Vinicius Alexander-Arnold : 1,76 buts/match
+5. Phil Griezmann            : 1,72 buts/match
+6. Declan Jr                 : 1,65 buts/match
+7. Neymar Rice               : 1,54 buts/match
+8. Virgil Alexander-Arnold   : 1,42 buts/match
+9. Antoine Camavinga         : 1,31 buts/match
+10. Romelu De Bruyne          : 1,27 buts/match
+
+TOP 10 - RAPPORT QUALITE-PRIX
+------------------------------
+1. Neymar Rice               : 43,0
+2. Robert Alexander-Arnold   : 31,0
+3. N'Golo Haaland            : 31,0
+4. Neymar Courtois           : 26,0
+5. Bukayo Páez               : 21,0
+6. Kevin Heung-min           : 20,0
+7. Mason Foden               : 19,0
+8. Lionel Lewandowski        : 18,0
+9. Virgil Alexander-Arnold   : 17,0
+10. Antoine Camavinga         : 17,0
+
+MOYENNES PAR LIGUE
+------------------
+AGE MOYEN :
+- Premier League            : 29,0 ans
+- Bundesliga                : 28,6 ans
+- Serie A                   : 27,7 ans
+- Ligue 1                   : 26,6 ans
+- La Liga                   : 26,6 ans
+
+Moyenne de but par league :
+- Bundesliga                : 0,78 buts/match
+- Premier League            : 0,47 buts/match
+- La Liga                   : 0,32 buts/match
+- Serie A                   : 0,31 buts/match
+- Ligue 1                   : 0,27 buts/match
+
+LIGUE LA PLUS EFFICACE : Bundesliga
+
 STATISTIQUES DISCIPLINAIRES
 -----------------------------
 - Total cartons jaunes      : 473
@@ -97,4 +141,4 @@ STATISTIQUES DISCIPLINAIRES
 - Poste le plus discipline  : Goalkeeper
 - Poste le moins discipline : Midfielder
 
-Temps de traitement total : 0,11 secondes
+Temps de traitement total : 0,12 secondes

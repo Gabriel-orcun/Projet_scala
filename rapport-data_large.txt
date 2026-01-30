@@ -90,6 +90,50 @@ BUTS PAR MATCH (moyenne) :
 - Defender                  : 4,32 buts/match
 - Goalkeeper                : 0,00 buts/match
 
+TOP 10 - EFFICACITE (buts/match)
+--------------------------------
+1. N'Golo Haaland            : 3,10 buts/match
+2. N'Golo Haaland 1          : 3,10 buts/match
+3. N'Golo Haaland 2          : 3,10 buts/match
+4. N'Golo Haaland 3          : 3,10 buts/match
+5. N'Golo Haaland 4          : 3,10 buts/match
+6. N'Golo Haaland 5          : 3,10 buts/match
+7. N'Golo Haaland 6          : 3,10 buts/match
+8. N'Golo Haaland 7          : 3,10 buts/match
+9. N'Golo Haaland 8          : 3,10 buts/match
+10. N'Golo Haaland 9          : 3,10 buts/match
+
+TOP 10 - RAPPORT QUALITE-PRIX
+------------------------------
+1. Neymar Rice               : 43,0
+2. Neymar Rice 1             : 43,0
+3. Neymar Rice 2             : 43,0
+4. Neymar Rice 3             : 43,0
+5. Neymar Rice 4             : 43,0
+6. Neymar Rice 5             : 43,0
+7. Neymar Rice 6             : 43,0
+8. Neymar Rice 7             : 43,0
+9. Neymar Rice 8             : 43,0
+10. Neymar Rice 9             : 43,0
+
+MOYENNES PAR LIGUE
+------------------
+AGE MOYEN :
+- Premier League            : 29,0 ans
+- Bundesliga                : 28,6 ans
+- Serie A                   : 27,7 ans
+- Ligue 1                   : 26,6 ans
+- La Liga                   : 26,6 ans
+
+Moyenne de but par league :
+- Bundesliga                : 0,78 buts/match
+- Premier League            : 0,47 buts/match
+- La Liga                   : 0,32 buts/match
+- Serie A                   : 0,31 buts/match
+- Ligue 1                   : 0,27 buts/match
+
+LIGUE LA PLUS EFFICACE : Bundesliga
+
 STATISTIQUES DISCIPLINAIRES
 -----------------------------
 - Total cartons jaunes      : 47300
@@ -97,4 +141,4 @@ STATISTIQUES DISCIPLINAIRES
 - Poste le plus discipline  : Goalkeeper
 - Poste le moins discipline : Midfielder
 
-Temps de traitement total : 0,10 secondes
+Temps de traitement total : 0,16 secondes
