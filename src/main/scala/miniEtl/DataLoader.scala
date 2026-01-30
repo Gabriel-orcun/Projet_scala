@@ -6,7 +6,8 @@ import io.circe.parser._
 import scala.io.Source
 import scala.util.{Try, Success, Failure}
 
-
+// Ici nous allons charger les données mais aussi et surtout gérer toute la logique pour ne pas
+//perdre d'information et attraper/différencier les différentes erreurs.
 object DataLoader{
     def loadPlayers(filename: String): Either[String, List[Player]] = {
         Try {

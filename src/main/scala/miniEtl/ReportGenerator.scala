@@ -9,6 +9,7 @@ import scala.util.Try
 import miniEtl.StatsCalculator.*
 
 object ReportGenerator {
+  // Fonction qui produit notre rapport en instanciant un analysis report en sortie
     def generateReport(players: List[Player], filename: String): AnalysisReport = {
         AnalysisReport(
             etlStats = calculateEtlStats(filename),
@@ -23,7 +24,7 @@ object ReportGenerator {
             disciplineStats = calculateDisciplineStats(players)
         )
     }
-
+// Classe qui va créer le rapport et l'écrire
     def writeReport(report: AnalysisReport, filename: String): Either[String, Unit] = {
     Try {
       val json = report.asJson.spaces2

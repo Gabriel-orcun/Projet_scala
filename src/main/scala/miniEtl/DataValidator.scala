@@ -1,7 +1,7 @@
 package miniEtl
 
 object DataValidator {
-
+// Fonction qui permet de normaliser les erreurs de nom dans notre data
   def normalisePosition(pos: String): String = {
     pos match {
       case "ATT" | "Attacker" => "Forward"
@@ -13,7 +13,7 @@ object DataValidator {
   }
 
  
-
+// Fonction qui permet de dire si un joueur respecte ou non les règles métier
   def isValid(player: Player): Boolean = {
     player.name.trim.nonEmpty &&
     player.nationality.trim.nonEmpty &&
@@ -25,14 +25,14 @@ object DataValidator {
     player.assists >= 0 &&
     player.matchesPlayed > 0
   }
-
+// Fonction qui filtre et garde uniquement les joueurs qui valident les règles métier
   def filterValid(players: List[Player]): List[Player] = {
     players
     .map(player => player.copy(position = normalisePosition(player.position)))
     .filter(isValid)
   }
 
-
+// Fonction qui supprime tous les doublons
   def removeDuplicates(players: List[Player]): List[Player] = {
     players.distinctBy(_.id)
 

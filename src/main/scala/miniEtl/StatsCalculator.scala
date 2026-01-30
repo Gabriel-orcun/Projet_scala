@@ -5,7 +5,7 @@ import io.circe.parser._
 import scala.io.Source
 
 object StatsCalculator {
-
+// Fonction qui calcule les statistiques de notre ETL
     def calculateEtlStats(filename : String) : EtlStats = {
         val source = Source.fromFile(filename)
         val content = source.mkString
@@ -31,7 +31,7 @@ object StatsCalculator {
          )
 
     }
-
+// Fonction qui renvoie les 10 meilleurs joueurs ayant marqué le plus de buts
     def calculateTopScorers(players : List[Player]) : List[TopPlayer] = {
         players.sortBy(- _.goalsScored).take(10).map( x => TopPlayer(
             x.name,
@@ -41,7 +41,7 @@ object StatsCalculator {
         ))
 
     }
-
+// Fonction qui renvoie les 10 meilleurs joueurs qui ont fait le plus de passes décisives
     def calculateTopAssisters(players : List[Player]): List[TopPlayer] = {
         players.sortBy(- _.assists).take(10).map( x => TopPlayer(
             x.name,
@@ -51,6 +51,7 @@ object StatsCalculator {
         ))
 
     }
+    // Fonction qui renvoie les 10 meilleurs joueurs qui ont les meilleures valeurs marchandes 
     def calculateMostValuablePlayers(players : List[Player]): List[TopPlayer] = {
 
         players.sortBy(- _.marketValue.getOrElse(0)).take(10).map( x => TopPlayer(
@@ -61,6 +62,7 @@ object StatsCalculator {
         ))
 
     }
+// Fonction qui renvoie les 10 joueurs les mieux payés  
     def calculateHighestPaidPlayers(players: List[Player]): List[TopPlayer] = {
         players.sortBy(- _.salary.getOrElse(0.0)).take(10).map( x => TopPlayer(
             x.name,
@@ -69,7 +71,7 @@ object StatsCalculator {
             x.matchesPlayed
         ))
     }
-
+// Fonction qui compte le nombre de joueurs par ligue
     def countPlayersByLeague(players: List[Player]): Map[String,Int] = {
         players.
         groupBy(_.league)
@@ -78,7 +80,7 @@ object StatsCalculator {
         }
 
     }
-
+// Fonction qui compte le nombre de joueurs par position
     def countPlayersByPosition(players : List[Player]): Map[String,Int] = {
         players.
         groupBy(_.position)
@@ -86,7 +88,7 @@ object StatsCalculator {
             case (k,v) => (k , v.size)
         }
     }
-
+// Fonction qui calcule la moyenne d'âge par position 
     def calculateAverageAgeByPosition(players: List[Player]): Map[String,Double] ={
         players.
         groupBy(_.position)
@@ -99,6 +101,7 @@ object StatsCalculator {
         }
 
     }
+// Fonction qui calcule la moyenne de buts par position 
     def calculateAverageGoalsByPosition(players : List[Player]): Map[String,Double] = {
         players.
         groupBy(_.position)
@@ -110,6 +113,9 @@ object StatsCalculator {
 
         }
     }
+// Fonction qui calcule le nombre de cartons jaunes et rouges, leur coût et les positions les plus
+// et moins disciplinées
+// Choix arbitraire ici avec un carton rouge qui est 2 fois plus sanctionnable qu'un jaune
     def calculateDisciplineStats(players: List[Player]): DisciplineStats = {
 
     val penaltiesByPosition: List[(String, Int)] =
